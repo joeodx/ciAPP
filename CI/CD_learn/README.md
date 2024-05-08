@@ -22,3 +22,13 @@ When is a CI pipeline used?
 * Developers trigger CI pipelines by pushing code changes to a version control system (e.g., Git) or by creating pull requests.
 * In our case looking at the diagram we are pushing the code automatically to jenkins to test the code before it is either deployed or delivered.
 
+How does a CI pipeline work?
+* When triggered, a CI pipeline retrieves the latest code changes from the version control system and executes predefined stages or tasks
+* Each stage in the pipeline performs a specific action, such as compiling code, running tests, checking code quality, or deploying artifacts.
+* In our case the pipeline is being triggered when code needs to be teseted in Jenkins 
+  
+Why use a CI pipeline?
+* There are many uses to a Ci pipeline. It saves time as you can automate the process of thigns you can do manually 
+* It ensures consistency along how code gets built, tested or even deployed 
+* 
+
