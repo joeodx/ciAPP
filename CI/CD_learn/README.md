@@ -30,5 +30,5 @@ How does a CI pipeline work?
 Why use a CI pipeline?
 * There are many uses to a Ci pipeline. It saves time as you can automate the process of thigns you can do manually 
 * It ensures consistency along how code gets built, tested or even deployed 
-* 
+  ********************************
 
