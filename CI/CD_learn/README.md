@@ -7,7 +7,7 @@
 
 ## Continuous intergration testing from localhost to jenkins 
  
- First of all what is a CI pipeline?
+ # First of all what is a CI pipeline?
 
  * A Continuous Integration (CI) pipeline is a set of automated processes that software development teams use to build, test, and deploy their code changes. 
  * The primary goal of a CI pipeline is to automate the steps involved in integrating new code into a shared repository and ensuring that it functions correctly with the existing codebase.
@@ -32,3 +32,14 @@ Why use a CI pipeline?
 * It ensures consistency along how code gets built, tested or even deployed 
   ********************************
 
+
+
+# What is a web hook?
+
+* A webhook is a mechanism for automatically triggering an action or notifying an external system when a certain event occurs.
+
+* An example of this would be on Amazing when you add an item to the basket it is checking first is that item in stock? If yes allow the item to be added to the basket. Then at the payment stage has the payment gone through? If yes send an email to notify the user of this. Has the item then been sent out for delivery? If yes notify the user that their item is on it's way.
+
+* A webhook is what allows all of these actions to me automated without this it wouldn't feasibly be possible for someone to do this for the billions of orders amazon gets each year.
+
+***********************************
