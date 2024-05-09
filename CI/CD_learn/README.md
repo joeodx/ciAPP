@@ -68,7 +68,34 @@ git@github.com:Ziziou91/tech258_cicd.git
 ![](/images/sc2.jpg)
 
 
-7. Now we need to provide a Node and npm for our app. Under the build environment tab cchec
+7. Now we need to provide a Node and npm for our app. Under the build environment check Provide Node and npm bin? folder to Path.
+  Change the node installation to ``Sparta-Node-JS```
+
+8. When you go to build tab add this to the execute shell : 
 
 
+```
+cd
+cd npm install
+npm test 
+```
 
+![](/images/done.jpg)
+
+
+9. Now save this. Our jenkins Master should be set up now.
+
+10. Now head to your github repp and go to the setting called webhooks. You see an option callled called paylaod, make sure to enter the url for the jenkins serve like below : 
+
+ * and the content type is **application/json**
+ * click **jsut the push event**
+ * click **Active**
+
+
+![](/images/3.jpeg)
+
+Then click update webhook. The webhook will send a post HTTP request to our jenkins server. **200** if is correct and **404** if not
+
+11. Now go back to the jenkisn config page for our job and under the build triggets tab, make sure to check **Github hook triggers for GITScm polling. 
+
+***************************************************
