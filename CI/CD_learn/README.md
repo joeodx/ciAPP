@@ -44,7 +44,8 @@ Why use a CI pipeline?
 
 ***********************************
 
-# Deploying our app via jenkins master server 
+# Deploying our app via jenkins master server with automated testing and webhook
+************************************
 
 1. Log into jenkins. 
 
@@ -54,7 +55,7 @@ Why use a CI pipeline?
 git@github.com:Ziziou91/tech258_cicd.git
 ```
 
-![](/images/sc.jpg)
+![](/imagessc.jpg)
 
 3. Go to the office 365 connector and click the option that says **Restrict where this project can be run**. Then under **label expression** add ```sparta-ubuntu-app```
 
@@ -99,3 +100,40 @@ Then click update webhook. The webhook will send a post HTTP request to our jenk
 11. Now go back to the jenkisn config page for our job and under the build triggets tab, make sure to check **Github hook triggers for GITScm polling. 
 
 ***************************************************
+
+## CI pipelines with jenkins and GIThub
+*************************************
+
+* You should never code on your main branch. Code on a dev branch or a seperate branch from main.
+
+1. Create a dev branch using ```git checkout``` in your local repositry
+2. For testing purposes, make a change to your work. 
+3.  Now using the testing job we created before, if the test pass it shall trigger the next job to merge the code from your new branch you created to ```main```
+  
+
+## Continus Delivery with Jenkins 
+
+* Now our code has been tested and has merged to the ```main branch``, the next step is to copy that code over to production
+* In our case that will be a ec2 instance. 
+
+How do we do this?
+
+1. Create a EC2 instance on AWS- with **Ubuntu 18.04 LTS**
+2. Configure the network security group to allow *ssh*,**3000**(node app) and 8080(for jenkins)
+3. git clone the app coide to the EC2 instance we made.
+4. Install what dependencies are required.
+
+* Once this is done we can now ssh into the instancew we made and manually install and start the app
+
+## Continious Deployment with Jenkins 
+
+How do we get our code to automatically deployed to the cloud?
+
+1. Use jenkins to ssh into our EC2 without user input so add the ```frontend command```
+2. Head to the app folder.
+3. start the app in the background!
+
+***************************************************************
+
+
+
