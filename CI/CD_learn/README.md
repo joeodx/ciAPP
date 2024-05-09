@@ -43,3 +43,32 @@ Why use a CI pipeline?
 * A webhook is what allows all of these actions to me automated without this it wouldn't feasibly be possible for someone to do this for the billions of orders amazon gets each year.
 
 ***********************************
+
+# Deploying our app via jenkins master server 
+
+1. Log into jenkins. 
+
+2. Add a description to your project and then select the Github project checkbox and add your projects Url.
+   For example mine was : 
+```
+git@github.com:Ziziou91/tech258_cicd.git
+```
+
+![](/images/sc.jpg)
+
+3. Go to the office 365 connector and click the option that says **Restrict where this project can be run**. Then under **label expression** add ```sparta-ubuntu-app```
+
+
+4. On the **source managment tab** slect Git. Add the the github repo URL. You should have already have your SSH key set up so you should get a error message now. 
+
+5. To fix this, add your private ssh key for the repo to Jenkins, and then choose it in the credentials. 
+
+6. Also **change the branch to main** like below : 
+
+![](/images/sc2.jpg)
+
+
+7. Now we need to provide a Node and npm for our app. Under the build environment tab cchec
+
+
+
